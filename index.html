@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>ConnectFour</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>CONNECT FOUR</h1>
+      <div class="game">
+        <div class="left">
+          <div class="player-one"></div>
+        </div>
+        <div class="middle">
+          <div id="main-game-container">
+            <div class="game-column" columnIndex="0">
+              <div class="game-box" id="b00"></div>
+              <div class="game-box" id="b10"></div>
+              <div class="game-box" id="b20"></div>
+              <div class="game-box" id="b30"></div>
+              <div class="game-box" id="b40"></div>
+              <div class="game-box" id="b50"></div>
+            </div>
+            <div class="game-column" columnIndex="1">
+              <div class="game-box" id="b01"></div>
+              <div class="game-box" id="b11"></div>
+              <div class="game-box" id="b21"></div>
+              <div class="game-box" id="b31"></div>
+              <div class="game-box" id="b41"></div>
+              <div class="game-box" id="b51"></div>
+            </div>
+            <div class="game-column" columnIndex="2">
+              <div class="game-box" id="b02"></div>
+              <div class="game-box" id="b12"></div>
+              <div class="game-box" id="b22"></div>
+              <div class="game-box" id="b32"></div>
+              <div class="game-box" id="b42"></div>
+              <div class="game-box" id="b52"></div>
+            </div>
+            <div class="game-column" columnIndex="3">
+              <div class="game-box" id="b03"></div>
+              <div class="game-box" id="b13"></div>
+              <div class="game-box" id="b23"></div>
+              <div class="game-box" id="b33"></div>
+              <div class="game-box" id="b43"></div>
+              <div class="game-box" id="b53"></div>
+            </div>
+            <div class="game-column" columnIndex="4">
+              <div class="game-box" id="b04"></div>
+              <div class="game-box" id="b14"></div>
+              <div class="game-box" id="b24"></div>
+              <div class="game-box" id="b34"></div>
+              <div class="game-box" id="b44"></div>
+              <div class="game-box" id="b54"></div>
+            </div>
+            <div class="game-column" columnIndex="5">
+              <div class="game-box" id="b05"></div>
+              <div class="game-box" id="b15"></div>
+              <div class="game-box" id="b25"></div>
+              <div class="game-box" id="b35"></div>
+              <div class="game-box" id="b45"></div>
+              <div class="game-box" id="b55"></div>
+            </div>
+            <div class="game-column" columnIndex="6">
+              <div class="game-box" id="b06"></div>
+              <div class="game-box" id="b16"></div>
+              <div class="game-box" id="b26"></div>
+              <div class="game-box" id="b36"></div>
+              <div class="game-box" id="b46"></div>
+              <div class="game-box" id="b56"></div>
+            </div>
+          </div>
+          <div class="buttons-container">
+            <div class="button start-button">START</div>
+            <div class="button restart-button main-restart">RESTART</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="player-two"></div>
+        </div>
+      </div>
+      <div class="end-game-container">
+        <div id="end-game-prompt"></div>
+        <div class="buttons-container">
+          <div class="button close-button">CLOSE</div>
+          <div class="button restart-button">RESTART</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <script src="game.js"></script>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+body {
+  text-align: center;
+  background-color: rgb(255, 223, 181);
+  font-family: "Ubuntu", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  font-style: italic;
+  color: rgb(63, 63, 63);
+  margin: 15px;
+}
+.game {
+  display: flex;
+  justify-content: space-evenly;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.button {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  height: 50px;
+  width: 125px;
+  cursor: pointer;
+}
+.start-button,
+.close-button {
+  background: radial-gradient(
+    circle,
+    rgba(245, 24, 24, 0.8) 0%,
+    rgba(212, 0, 0, 0.8) 100%
+  );
+}
+.start-button:hover,
+.close-button:hover {
+  background: radial-gradient(
+    circle,
+    rgba(245, 24, 24, 1) 0%,
+    rgba(212, 0, 0, 1) 100%
+  );
+}
+.restart-button {
+  background: radial-gradient(
+    circle,
+    rgba(21, 34, 242, 0.8) 0%,
+    rgba(1, 82, 176, 0.8) 100%
+  );
+}
+.restart-button:hover {
+  background: radial-gradient(
+    circle,
+    rgba(21, 34, 242, 1) 0%,
+    rgba(1, 82, 176, 1) 100%
+  );
+}
+.main-restart {
+  display: none;
+}
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-one,
+.player-two {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+#main-game-container {
+  display: grid;
+  grid-template-columns: 75px 75px 75px 75px 75px 75px 75px;
+  gap: 8px;
+  justify-content: center;
+  background-color: antiquewhite;
+  padding: 15px;
+  border-radius: 37px;
+}
+.game-column {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  gap: 8px;
+  border-radius: 37px;
+  height: auto;
+}
+.game-column.active:hover {
+  background-color: rgb(255, 223, 181);
+  cursor: pointer;
+}
+.game-box {
+  width: 100%;
+  height: 75px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 50%;
+}
+.game-box.bounce-animation {
+  animation: bounce 0.5s ease;
+}
+@keyframes bounce {
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-0px);
+  }
+  80% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-0px);
+  }
+}
+
+.end-game-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  gap: 20px;
+}
+#end-game-prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 500;
+  opacity: 1;
+  height: 300px;
+  width: 500px;
+  background-color: antiquewhite;
+  border-radius: 37px;
+  -webkit-box-shadow: 24px 24px 50px -12px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 24px 24px 50px -12px rgba(0, 0, 0, 0.56);
+  box-shadow: 24px 24px 50px -12px rgba(0, 0, 0, 0.56);
+}
+.end-game-container.appear {
+  opacity: 0;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.end-game-container.fade-transition {
+  opacity: 1;
+}
+.end-game-container.fadeout-transition {
+  opacity: 0;
+}
