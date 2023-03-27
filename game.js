@@ -81,8 +81,8 @@ function checkDraw(board) {
     if (board[0][i] === 0) {
       return false;
     }
-    return true;
   }
+  return true;
 }
 let player;
 let board;
